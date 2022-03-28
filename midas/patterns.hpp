@@ -9,6 +9,7 @@ namespace patterns
 {
 	namespace engine
 	{
+
 		PATTERNS(
 		    SpawnPlayer,
 		    "5135",
@@ -568,4 +569,10 @@ namespace patterns
 		         "55 8B EC 8B 49 08 81 EC 80 00 00 00 8D 45 80 50 E8 ?? ?? ?? ?? 8B 45 08 85 C0");
 	} // namespace vphysics
 
+	namespace ifm
+	{
+		PATTERNS(GetModelViewerOpened,
+			"5841",
+			"57 8B F9 8B 8F ?? ?? ?? ?? E8 ?? ?? ?? ?? 85 C0 0F 84 ?? ?? ?? ?? FF 15 ?? ?? ?? ??");
+	} // namespace ifm
 } // namespace patterns

@@ -59,7 +59,4 @@ namespace utils
 	                  const cplane_t& plane1,
 	                  const cplane_t& plane2,
 	                  QAngle& seamAngle);
-#if !defined(OE)
-	void CheckPiwSave();
-#endif
 } // namespace utils

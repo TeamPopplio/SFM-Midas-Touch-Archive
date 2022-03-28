@@ -8,13 +8,11 @@ void Cvar_RegisterMidasCvars();
 void Cvar_UnregisterMidasCvars();
 void Cvar_InitConCommandBase(ConCommandBase& concommand, void* owner);
 
-extern ConVar y_midas_pause;
 extern ConVar y_midas_motion_blur_fix;
 extern ConVar y_midas_autojump;
 extern ConVar y_midas_additional_jumpboost;
 extern ConVar y_midas_focus_nosleep;
 extern ConVar y_midas_stucksave;
-extern ConVar y_midas_piwsave;
 extern ConVar y_midas_pause_demo_on_tick;
 extern ConVar y_midas_on_slide_pause_for;
 extern ConVar y_midas_prevent_vag_crash;

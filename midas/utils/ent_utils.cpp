@@ -8,9 +8,7 @@
 #include <vector>
 
 #include "..\cvars.hpp"
-#include "..\overlay\portal_camera.hpp"
 #include "..\sptlib-wrapper.hpp"
-#include "..\strafe\strafestuff.hpp"
 #include "SPTLib\sptlib.hpp"
 #include "client_class.h"
 #include "game_detection.hpp"
@@ -18,7 +16,6 @@
 #include "string_utils.hpp"
 #include "math.hpp"
 #include "game_detection.hpp"
-#include "..\features\playerio.hpp"
 #include "..\features\tickrate.hpp"
 #include "..\features\tracing.hpp"
 #include "..\midas-serverplugin.hpp"
@@ -49,30 +46,6 @@ namespace utils
 			if (ent)
 			{
 				Msg("%d : %s\n", i, ent->GetClientClass()->m_pNetworkName);
-			}
-		}
-	}
-
-	void PrintAllPortals()
-	{
-		int maxIndex = interfaces::entList->GetHighestEntityIndex();
-
-		for (int i = 0; i <= maxIndex; ++i)
-		{
-			auto ent = GetClientEntity(i);
-			if (!invalidPortal(ent))
-			{
-				auto& pos = ent->GetAbsOrigin();
-				auto& angles = ent->GetAbsAngles();
-				Msg("%d : %s, position (%.3f, %.3f, %.3f), angles (%.3f, %.3f, %.3f)\n",
-				    i,
-				    ent->GetClientClass()->m_pNetworkName,
-				    pos.x,
-				    pos.y,
-				    pos.z,
-				    angles.x,
-				    angles.y,
-				    angles.z);
 			}
 		}
 	}
@@ -403,27 +376,6 @@ namespace utils
 		return entries;
 	}
 
-	void SimulateFrames(int frames)
-	{
-		auto vars = midas_playerio.GetMovementVars();
-		auto player = midas_playerio.GetPlayerData();
-		auto type = Strafe::GetPositionType(player, Strafe::HullType::NORMAL);
-
-		for (int i = 0; i < frames; ++i)
-		{
-			Msg("%d: pos: (%.3f, %.3f, %.3f), vel: (%.3f, %.3f, %.3f), ducked %d, onground %d\n",
-			    i,
-			    player.UnduckedOrigin.x,
-			    player.UnduckedOrigin.y,
-			    player.UnduckedOrigin.z,
-			    player.Velocity.x,
-			    player.Velocity.y,
-			    player.Velocity.z,
-			    player.Ducking,
-			    type == Strafe::PositionType::GROUND);
-			type = Strafe::Move(player, vars);
-		}
-	}
 	int GetIndex(void* ent)
 	{
 		if (!ent)
@@ -464,54 +416,6 @@ namespace utils
 		return edict->GetUnknown();
 	}
 
-	JBData CanJB(float height)
-	{
-		JBData data;
-		data.ticks = -1;
-		data.canJB = false;
-		data.landingHeight = std::numeric_limits<float>::max();
-
-		if (!utils::playerEntityAvailable())
-			return data;
-
-		Vector player_origin = midas_playerio.GetPlayerEyePos();
-		Vector vel = midas_playerio.GetPlayerVelocity();
-
-		constexpr float gravity = 600;
-		constexpr float groundThreshold = 2.0f;
-		float ticktime = midas_tickrate.GetTickrate();
-		constexpr int maxIterations = 1000;
-
-		for (int i = 0; i < maxIterations; ++i)
-		{
-			auto absDiff = std::abs(player_origin.z - height);
-
-			// If distance to ground is closer than any other attempt, update the data
-			if (absDiff < std::abs(data.landingHeight - height) && vel.z < 0)
-			{
-				data.landingHeight = player_origin.z;
-				data.ticks = i;
-
-				// Can jb, exit the loop
-				if (player_origin.z - height <= groundThreshold && player_origin.z - height >= 0)
-				{
-					data.canJB = true;
-					break;
-				}
-				else if (player_origin.z < height && vel.z < 0) // fell past the jb point
-				{
-					break;
-				}
-			}
-
-			vel.z -= (gravity * ticktime / 2);
-			player_origin.z += vel.z * ticktime;
-			vel.z -= (gravity * ticktime / 2);
-		}
-
-		return data;
-	}
-
 	bool playerEntityAvailable()
 	{
 #ifdef OE
@@ -537,22 +441,6 @@ namespace utils
 		return unknown->GetBaseEntity();
 	}
 
-	bool GetPunchAngleInformation(QAngle& punchAngle, QAngle& punchAngleVel)
-	{
-		auto ply = GetServerEntity(1);
-
-		if (ply)
-		{
-			punchAngle = midas_playerio.m_vecPunchAngle.GetValue();
-			punchAngleVel = midas_playerio.m_vecPunchAngleVel.GetValue();
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-
 #if !defined(OE)
 	static int GetServerEntityCount()
 	{
@@ -560,42 +448,6 @@ namespace utils
 			return 0;
 
 		return interfaces::engine_server->GetEntityCount();
-	}
-
-	void CheckPiwSave()
-	{
-		if (y_midas_piwsave.GetString()[0] != '\0')
-		{
-			auto ply = GetServerEntity(1);
-			if (ply)
-			{
-				auto pphys = ply->VPhysicsGetObject();
-				if (pphys && (pphys->GetGameFlags() & FVPHYSICS_PENETRATING) == 0)
-				{
-					int count = GetServerEntityCount();
-					for (int i = 0; i < count; ++i)
-					{
-						auto ent = GetServerEntity(i);
-						if (!ent)
-							continue;
-
-						auto phys = ent->VPhysicsGetObject();
-						if (!phys)
-							continue;
-
-						const auto mask = FVPHYSICS_PLAYER_HELD | FVPHYSICS_PENETRATING;
-
-						if ((phys->GetGameFlags() & mask) == mask)
-						{
-							std::ostringstream oss;
-							oss << "save " << y_midas_piwsave.GetString();
-							EngineConCmd(oss.str().c_str());
-							y_midas_piwsave.SetValue("");
-						}
-					}
-				}
-			}
-		}
 	}
 #endif
 

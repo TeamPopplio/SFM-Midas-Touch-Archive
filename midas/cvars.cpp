@@ -77,6 +77,8 @@ void Cvar_RegisterMidasCvars()
 	if (first_time_init)
 	{
 		ConVar_Register(0);
+		// TODO: Get a convar to use here.
+		/*
 		int identifier = y_midas_pause.GetDLLIdentifier();
 
 		ConCommandBase* cmd = interfaces::g_pCVar->GetCommands();
@@ -98,6 +100,7 @@ void Cvar_RegisterMidasCvars()
 			if (todelete)
 				g_pCVar->UnregisterConCommand(todelete);
 		}
+		*/
 	}
 	else
 	{

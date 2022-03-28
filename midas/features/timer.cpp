@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "..\feature.hpp"
-#include "generic.hpp"
 #include "signals.hpp"
 
 #include "convar.h"

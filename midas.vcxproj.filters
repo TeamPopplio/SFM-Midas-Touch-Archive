@@ -49,6 +49,9 @@
     <ClCompile Include="midas\feature.cpp">
       <Filter>midas</Filter>
     </ClCompile>
+    <ClCompile Include="midas\features\sfm_test.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
     <ClCompile Include="midas\features\isg.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>

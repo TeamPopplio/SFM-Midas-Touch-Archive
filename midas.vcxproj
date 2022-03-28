@@ -265,46 +265,26 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="midas\aim\aimstuff.cpp" />
     <ClCompile Include="midas\cvars.cpp" />
     <ClCompile Include="midas\feature.cpp" />
-    <ClCompile Include="midas\features\afterframes.cpp" />
-    <ClCompile Include="midas\features\aim.cpp" />
-    <ClCompile Include="midas\features\autojump.cpp" />
+	<ClCompile Include="midas\features\sfm_test.cpp" />
     <ClCompile Include="midas\features\cvar.cpp" />
-    <ClCompile Include="midas\features\demo.cpp" />
     <ClCompile Include="midas\features\dmomm.cpp" />
     <ClCompile Include="midas\features\ent_props.cpp" />
     <ClCompile Include="midas\features\fov.cpp" />
-    <ClCompile Include="midas\features\generic.cpp" />
-    <ClCompile Include="midas\features\graphics.cpp" />
     <ClCompile Include="midas\features\hops_hud.cpp" />
     <ClCompile Include="midas\features\hud.cpp" />
     <ClCompile Include="midas\features\ihud.cpp" />
-    <ClCompile Include="midas\features\ipc-midas.cpp" />
     <ClCompile Include="midas\features\isg.cpp" />
     <ClCompile Include="midas\features\nosleep.cpp" />
-    <ClCompile Include="midas\features\overlay.cpp" />
-    <ClCompile Include="midas\features\pause.cpp" />
     <ClCompile Include="midas\features\physvis.cpp" />
-    <ClCompile Include="midas\features\playerio.cpp" />
     <ClCompile Include="midas\features\restart.cpp" />
     <ClCompile Include="midas\features\rng.cpp" />
-    <ClCompile Include="midas\features\sg-collide-vis.cpp" />
     <ClCompile Include="midas\features\shadow.cpp" />
-    <ClCompile Include="midas\features\stucksave.cpp" />
-    <ClCompile Include="midas\features\tas.cpp" />
-    <ClCompile Include="midas\features\taslogging.cpp" />
-    <ClCompile Include="midas\features\taspause.cpp" />
-    <ClCompile Include="midas\features\test.cpp" />
     <ClCompile Include="midas\features\tickrate.cpp" />
     <ClCompile Include="midas\features\timer.cpp" />
     <ClCompile Include="midas\features\tracing.cpp" />
-    <ClCompile Include="midas\features\vag.cpp" />
-    <ClCompile Include="midas\features\vag_searcher.cpp" />
-    <ClCompile Include="midas\features\vag_trace.cpp" />
     <ClCompile Include="midas\features\visual_fixes.cpp" />
-    <ClCompile Include="midas\ipc\ipc.cpp" />
     <ClCompile Include="sptlib\sptlib.cpp">
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
@@ -321,17 +301,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="midas\overlay\overlay-renderer.cpp" />
-    <ClCompile Include="midas\overlay\overlays.cpp" />
-    <ClCompile Include="midas\overlay\portal_camera.cpp" />
-    <ClCompile Include="midas\scripts\condition.cpp" />
-    <ClCompile Include="midas\scripts\framebulk_handler.cpp" />
-    <ClCompile Include="midas\scripts\parsed_script.cpp" />
-    <ClCompile Include="midas\scripts\srctas_reader.cpp" />
-    <ClCompile Include="midas\scripts\tester.cpp" />
-    <ClCompile Include="midas\scripts\test_item.cpp" />
-    <ClCompile Include="midas\scripts\tracker.cpp" />
-    <ClCompile Include="midas\scripts\variable_container.cpp" />
     <ClCompile Include="midas\midas-serverplugin.cpp" />
     <ClCompile Include="midas\sptlib-wrapper.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -343,7 +312,6 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.hpp</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.hpp</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="midas\strafe\strafestuff.cpp" />
     <ClCompile Include="midas\utils\datamap_wrapper.cpp" />
     <ClCompile Include="midas\utils\ent_utils.cpp" />
     <ClCompile Include="midas\utils\file.cpp" />
@@ -352,7 +320,6 @@
     <ClCompile Include="midas\utils\property_getter.cpp" />
     <ClCompile Include="midas\utils\signals.cpp" />
     <ClCompile Include="midas\utils\string_utils.cpp" />
-    <ClCompile Include="midas\vgui\lines.cpp" />
     <ClCompile Include="midas\vgui\vgui_utils.cpp" />
     <ClCompile Include="thirdparty\md5.cpp" />
   </ItemGroup>
@@ -396,47 +363,23 @@
     <ClInclude Include="SPTLIB\patterns.hpp" />
     <ClInclude Include="SPTLIB\patterns_macros.hpp" />
     <ClInclude Include="SPTLIB\Windows\DetoursUtils.hpp" />
-    <ClInclude Include="midas\aim\aimstuff.hpp" />
     <ClInclude Include="midas\cvars.hpp" />
     <ClInclude Include="midas\feature.hpp" />
-    <ClInclude Include="midas\features\afterframes.hpp" />
-    <ClInclude Include="midas\features\aim.hpp" />
-    <ClInclude Include="midas\features\autojump.hpp" />
-    <ClInclude Include="midas\features\demo.hpp" />
     <ClInclude Include="midas\features\ent_props.hpp" />
-    <ClInclude Include="midas\features\generic.hpp" />
     <ClInclude Include="midas\features\hud.hpp" />
     <ClInclude Include="midas\features\ihud.hpp" />
-    <ClInclude Include="midas\features\overlay.hpp" />
     <ClInclude Include="midas\features\physvis.hpp" />
-    <ClInclude Include="midas\features\playerio.hpp" />
     <ClInclude Include="midas\features\rng.hpp" />
     <ClInclude Include="midas\features\shadow.hpp" />
-    <ClInclude Include="midas\features\tas.hpp" />
     <ClInclude Include="midas\features\tickrate.hpp" />
     <ClInclude Include="midas\features\tracing.hpp" />
-    <ClInclude Include="midas\features\vag_searcher.hpp" />
     <ClInclude Include="midas\ipc\ipc.hpp" />
-    <ClInclude Include="midas\overlay\overlay-renderer.hpp" />
-    <ClInclude Include="midas\overlay\overlays.hpp" />
-    <ClInclude Include="midas\overlay\portal_camera.hpp" />
     <ClInclude Include="midas\patterns.hpp" />
-    <ClInclude Include="midas\scripts\condition.hpp" />
-    <ClInclude Include="midas\scripts\framebulk_handler.hpp" />
-    <ClInclude Include="midas\scripts\parsed_script.hpp" />
-    <ClInclude Include="midas\scripts\range_variable.hpp" />
-    <ClInclude Include="midas\scripts\srctas_reader.hpp" />
-    <ClInclude Include="midas\scripts\tester.hpp" />
-    <ClInclude Include="midas\scripts\test_item.hpp" />
-    <ClInclude Include="midas\scripts\tracker.hpp" />
-    <ClInclude Include="midas\scripts\variable_container.hpp" />
     <ClInclude Include="midas\midas-serverplugin.hpp" />
     <ClInclude Include="sptlib\sptlib.hpp" />
     <ClInclude Include="sptlib\sptlib-stdafx.hpp" />
     <ClInclude Include="midas\sptlib-wrapper.hpp" />
     <ClInclude Include="midas\stdafx.hpp" />
-    <ClInclude Include="midas\strafe\strafestuff.hpp" />
-    <ClInclude Include="midas\strafe\strafe_utils.hpp" />
     <ClInclude Include="midas\utils\convar.hpp" />
     <ClInclude Include="midas\utils\custom_interfaces.hpp" />
     <ClInclude Include="midas\utils\datamap_wrapper.hpp" />
@@ -448,7 +391,6 @@
     <ClInclude Include="midas\utils\property_getter.hpp" />
     <ClInclude Include="midas\utils\signals.hpp" />
     <ClInclude Include="midas\utils\string_utils.hpp" />
-    <ClInclude Include="midas\vgui\lines.hpp" />
     <ClInclude Include="midas\vgui\vgui_utils.hpp" />
     <ClInclude Include="thirdparty\Delegate.h" />
     <ClInclude Include="thirdparty\json.hpp" />

@@ -13,11 +13,8 @@
 #include "math.hpp"
 #include "string_utils.hpp"
 #include "game_detection.hpp"
-#include "..\features\generic.hpp"
-#include "..\features\playerio.hpp"
 #include "custom_interfaces.hpp"
 #include "cvars.hpp"
-#include "scripts\srctas_reader.hpp"
 #include "..\feature.hpp"
 #include "vstdlib\random.h"
 
@@ -40,8 +37,6 @@
 #endif
 
 #include "SPTLib\sptlib.hpp"
-#include "overlay\overlay-renderer.hpp"
-#include "overlay\overlays.hpp"
 #include "tier0\memdbgoff.h" // YaLTeR - switch off the memory debugging.
 using namespace std::literals;
 
@@ -204,24 +199,6 @@ bool CMidasTouch::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceFn gam
 		if (!interfaces::engine)
 			interfaces::engine = std::make_unique<IVEngineClientWrapper<IVEngineClient>>(
 			    reinterpret_cast<IVEngineClient*>(ptr));
-	}
-
-	if (!interfaces::engine)
-	{
-		DevWarning("Midas: Failed to get the IVEngineClient interface.\n");
-		Warning("Midas: y_midas_afterframes has no effect.\n");
-		Warning("Midas: _y_midas_setpitch and _y_midas_setyaw have no effect.\n");
-		Warning("Midas: _y_midas_pitchspeed and _y_midas_yawspeed have no effect.\n");
-		Warning("Midas: y_midas_stucksave has no effect.\n");
-	}
-
-	if (utils::DoesGameLookLikePortal())
-	{
-		DevMsg("Midas: This game looks like portal. Setting the tas_* cvars appropriately.\n");
-
-		tas_force_airaccelerate.SetValue(15);
-		tas_force_wishspeed_cap.SetValue(60);
-		tas_reset_surface_friction.SetValue(0);
 	}
 
 	if (!interfaces::engine_server)

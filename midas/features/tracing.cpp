@@ -2,14 +2,12 @@
 #include "tracing.hpp"
 #include "ent_utils.hpp"
 #include "game_detection.hpp"
-#include "generic.hpp"
 #include "hud.hpp"
 #include "math.hpp"
 #include "interfaces.hpp"
 #include "convar.h"
 #include "string_utils.hpp"
 #include "..\sptlib-wrapper.hpp"
-#include "..\strafe\strafestuff.hpp"
 
 ConVar y_midas_hud_oob("y_midas_hud_oob", "0", FCVAR_CHEAT, "Is the player OoB?");
 Tracing midas_tracing;
