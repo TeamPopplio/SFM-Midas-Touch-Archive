@@ -189,11 +189,8 @@ bool CMidasTouch::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceFn gam
 	}
 #endif
 
-#if !defined(BMS)
-	auto ptr = interfaceFactory(VENGINE_CLIENT_INTERFACE_VERSION, NULL);
-#else
-	auto ptr = interfaceFactory("VEngineClient015", NULL);
-#endif
+	// source filmmaker's engine client version
+	auto ptr = interfaceFactory("VEngineClient013", NULL);
 
 	if (ptr)
 	{
@@ -267,7 +264,7 @@ bool CMidasTouch::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceFn gam
 	    std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - startTime)
 	        .count();
 	std::ostringstream out;
-	out << "MidasTouch version " MIDAS_VERSION " was loaded in " << loadTime << "ms.\n";
+	out << "Midas Touch version " MIDAS_VERSION " was loaded in " << loadTime << "ms.\n";
 
 	Msg("%s", std::string(out.str()).c_str());
 
@@ -293,7 +290,7 @@ void CMidasTouch::Unload(void)
 
 const char* CMidasTouch::GetPluginDescription(void)
 {
-	return "Midas Touch v" MIDAS_VERSION ", KiwifruitDev - Fork of MidasTouch by Ivan \"YaLTeR\" Molodetskikh";
+	return "Midas Touch v" MIDAS_VERSION ", KiwifruitDev - Fork of SourcePauseTool by Ivan \"YaLTeR\" Molodetskikh";
 }
 
 void CMidasTouch::GameFrame(bool simulating)
