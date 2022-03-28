@@ -1,0 +1,9 @@
+[submodule "SPTLib"]
+	path = SPTLib
+	url = https://github.com/YaLTeR/SPTLib.git
+	shallow = true
+[submodule "SDK/sdk2013"]
+	path = SDK/sdk2013
+	url = https://github.com/alliedmodders/hl2sdk.git
+	branch = sdk2013
+	shallow = true
