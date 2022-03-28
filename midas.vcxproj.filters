@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="midas\stdafx.cpp">
+      <Filter>midas</Filter>
+    </ClCompile>
+    <ClCompile Include="sptlib\Hooks.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="sptlib\IHookableModule.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="sptlib\IHookableNameFilter.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="sptlib\memutils.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="sptlib\sptlib.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="sptlib\sptlib-stdafx.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\sptlib-wrapper.cpp">
+      <Filter>midas</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableDirFilter.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Windows\DetoursUtils.cpp">
+      <Filter>SPTLib\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Windows\Hooks_win.cpp">
+      <Filter>SPTLib\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\Windows\MemUtils_win.cpp">
+      <Filter>SPTLib\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="SPTLib\IHookableNameFilterOrdered.cpp">
+      <Filter>SPTLib</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\ipc\ipc.cpp">
+      <Filter>midas\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\md5.cpp">
+      <Filter>thirdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\feature.cpp">
+      <Filter>midas</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\isg.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\shadow.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\tas.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\playerio.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\generic.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\afterframes.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\pause.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\autojump.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\nosleep.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\hud.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\taspause.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\tickrate.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\visual_fixes.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\dmomm.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\overlay.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\demo.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\fov.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\tracing.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\taslogging.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\stucksave.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\timer.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\rng.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\vag.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\ent_props.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\cvar.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\utils\ent_utils.cpp">
+      <Filter>midas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\utils\file.cpp">
+      <Filter>midas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\utils\game_detection.cpp">
+      <Filter>midas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\utils\math.cpp">
+      <Filter>midas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\utils\property_getter.cpp">
+      <Filter>midas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\utils\string_utils.cpp">
+      <Filter>midas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\midas-serverplugin.cpp">
+      <Filter>midas</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\overlay\overlay-renderer.cpp">
+      <Filter>midas\overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\overlay\overlays.cpp">
+      <Filter>midas\overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\overlay\portal_camera.cpp">
+      <Filter>midas\overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\vgui\lines.cpp">
+      <Filter>midas\vgui</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\scripts\condition.cpp">
+      <Filter>midas\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\scripts\framebulk_handler.cpp">
+      <Filter>midas\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\scripts\parsed_script.cpp">
+      <Filter>midas\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\scripts\srctas_reader.cpp">
+      <Filter>midas\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\scripts\tester.cpp">
+      <Filter>midas\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\scripts\test_item.cpp">
+      <Filter>midas\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\scripts\tracker.cpp">
+      <Filter>midas\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\scripts\variable_container.cpp">
+      <Filter>midas\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\strafe\strafestuff.cpp">
+      <Filter>midas\strafe</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\aim\aimstuff.cpp">
+      <Filter>midas\aim</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\utils\signals.cpp">
+      <Filter>midas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\test.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\graphics.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\ipc-midas.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\aim.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\vgui\vgui_utils.cpp">
+      <Filter>midas\vgui</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\cvars.cpp">
+      <Filter>midas</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\hops_hud.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\utils\datamap_wrapper.cpp">
+      <Filter>midas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\ihud.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\utils\datamap_wrapper.cpp">
+      <Filter>midas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\restart.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\physvis.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\sg-collide-vis.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\vag_searcher.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\features\vag_trace.cpp">
+      <Filter>midas\features</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\public\tier0\basetypes.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\Color.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\tier0\dbg.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\eiface.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\filesystem.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\vstdlib\ICommandLine.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\igameevents.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\tier1\interface.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\game\server\iplayerinfo.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\engine\iserverplugin.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\tier1\KeyValues.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\tier0\mem.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\tier0\memalloc.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\tier0\memdbgon.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\vstdlib\strtools.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\tier1\utlbuffer.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\tier1\utlmemory.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\tier1\utlvector.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\public\vstdlib\vstdlib.h">
+      <Filter>SDK includes &amp; libs</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\igamemovement.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\imovehelper.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hl_movedata.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="sptlib\Hooks.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="sptlib\IHookableModule.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="sptlib\IHookableNameFilter.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="sptlib\memutils.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="sptlib\sptlib.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="sptlib\sptlib-stdafx.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\sptlib-wrapper.hpp">
+      <Filter>midas</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\stdafx.hpp">
+      <Filter>midas</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\IHookableDirFilter.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\Windows\DetoursUtils.hpp">
+      <Filter>SPTLib\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\IHookableNameFilterOrdered.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\patterns.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SPTLib\patterns_macros.hpp">
+      <Filter>SPTLib</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\ipc\ipc.hpp">
+      <Filter>midas\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\Delegate.h">
+      <Filter>thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json.hpp">
+      <Filter>thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\md5.hpp">
+      <Filter>thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\Signal.h">
+      <Filter>thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\usercmd.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\feature.hpp">
+      <Filter>midas</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\shadow.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\playerio.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\generic.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\afterframes.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\autojump.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\tickrate.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\overlay.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\demo.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\tracing.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\rng.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\convar.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\custom_interfaces.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\ent_utils.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\file.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\game_detection.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\interfaces.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\math.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\property_getter.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\string_utils.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\cvars.hpp">
+      <Filter>midas</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\patterns.hpp">
+      <Filter>midas</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\midas-serverplugin.hpp">
+      <Filter>midas</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\overlay\overlay-renderer.hpp">
+      <Filter>midas\overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\overlay\overlays.hpp">
+      <Filter>midas\overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\overlay\portal_camera.hpp">
+      <Filter>midas\overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\vgui\lines.hpp">
+      <Filter>midas\vgui</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\scripts\condition.hpp">
+      <Filter>midas\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\scripts\framebulk_handler.hpp">
+      <Filter>midas\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\scripts\parsed_script.hpp">
+      <Filter>midas\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\scripts\range_variable.hpp">
+      <Filter>midas\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\scripts\srctas_reader.hpp">
+      <Filter>midas\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\scripts\tester.hpp">
+      <Filter>midas\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\scripts\test_item.hpp">
+      <Filter>midas\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\scripts\tracker.hpp">
+      <Filter>midas\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\scripts\variable_container.hpp">
+      <Filter>midas\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\strafe\strafe_utils.hpp">
+      <Filter>midas\strafe</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\strafe\strafestuff.hpp">
+      <Filter>midas\strafe</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\signals.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\aim.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\aim\aimstuff.hpp">
+      <Filter>midas\aim</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\vgui\vgui_utils.hpp">
+      <Filter>midas\vgui</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\tas.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\hud.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\datamap_wrapper.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\ihud.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\utils\datamap_wrapper.hpp">
+      <Filter>midas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\ent_props.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\physvis.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\features\vag_searcher.hpp">
+      <Filter>midas\features</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\lib\public\mathlib.lib">
+      <Filter>SDK includes &amp; libs</Filter>
+    </Library>
+    <Library Include="..\..\lib\public\tier0.lib">
+      <Filter>SDK includes &amp; libs</Filter>
+    </Library>
+    <Library Include="..\..\lib\public\tier1.lib">
+      <Filter>SDK includes &amp; libs</Filter>
+    </Library>
+    <Library Include="..\..\lib\public\tier2.lib">
+      <Filter>SDK includes &amp; libs</Filter>
+    </Library>
+    <Library Include="..\..\lib\public\vstdlib.lib">
+      <Filter>SDK includes &amp; libs</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="SDK includes &amp; libs">
+      <UniqueIdentifier>{eade2e26-4b70-429d-ac6b-01135e887da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas">
+      <UniqueIdentifier>{42277bb4-807d-445f-8dc9-abaf03016da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{78e5a6c2-53a8-40e3-be19-b7e7bc33f3c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SPTLib">
+      <UniqueIdentifier>{62068487-8a42-452a-b559-e0253a231434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\utils">
+      <UniqueIdentifier>{33715ce3-a05a-40e3-9a9d-1d15086add50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SPTLib\Windows">
+      <UniqueIdentifier>{9a4a9a35-de34-40d0-a01c-057aea6a099d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\ipc">
+      <UniqueIdentifier>{42f93376-be0b-4934-9764-994217a9d65a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty">
+      <UniqueIdentifier>{20f959c6-2185-4a22-af30-a22417e39297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\features">
+      <UniqueIdentifier>{e24a2a7d-8667-4610-887c-f14d62c9fbf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\overlay">
+      <UniqueIdentifier>{a5343f9b-ae64-4b1f-8126-a7964c98afb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\vgui">
+      <UniqueIdentifier>{ef90278d-c4de-4d5f-b06f-50c99a1d056f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\scripts">
+      <UniqueIdentifier>{a46aaf49-b67f-4f3a-8356-9c9c87901911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\strafe">
+      <UniqueIdentifier>{8da5a507-6984-4ca8-a309-751bae22e3f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\aim">
+      <UniqueIdentifier>{dddef7ec-c95f-4baa-9f56-d47554ea2e86}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="thirdparty\example.txt">
+      <Filter>thirdparty</Filter>
+    </Text>
+    <Text Include="midas\features\template.cpp.txt">
+      <Filter>midas\features</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
