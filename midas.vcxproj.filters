@@ -40,9 +40,6 @@
     <ClCompile Include="SPTLib\IHookableNameFilterOrdered.cpp">
       <Filter>SPTLib</Filter>
     </ClCompile>
-    <ClCompile Include="midas\ipc\ipc.cpp">
-      <Filter>midas\ipc</Filter>
-    </ClCompile>
     <ClCompile Include="thirdparty\md5.cpp">
       <Filter>thirdparty</Filter>
     </ClCompile>
@@ -58,31 +55,10 @@
     <ClCompile Include="midas\features\shadow.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>
-    <ClCompile Include="midas\features\tas.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\playerio.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\generic.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\afterframes.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\pause.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\autojump.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
     <ClCompile Include="midas\features\nosleep.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>
     <ClCompile Include="midas\features\hud.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\taspause.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>
     <ClCompile Include="midas\features\tickrate.cpp">
@@ -94,31 +70,16 @@
     <ClCompile Include="midas\features\dmomm.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>
-    <ClCompile Include="midas\features\overlay.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\demo.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
     <ClCompile Include="midas\features\fov.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>
     <ClCompile Include="midas\features\tracing.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>
-    <ClCompile Include="midas\features\taslogging.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\stucksave.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
     <ClCompile Include="midas\features\timer.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>
     <ClCompile Include="midas\features\rng.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\vag.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>
     <ClCompile Include="midas\features\ent_props.cpp">
@@ -148,62 +109,8 @@
     <ClCompile Include="midas\midas-serverplugin.cpp">
       <Filter>midas</Filter>
     </ClCompile>
-    <ClCompile Include="midas\overlay\overlay-renderer.cpp">
-      <Filter>midas\overlay</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\overlay\overlays.cpp">
-      <Filter>midas\overlay</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\overlay\portal_camera.cpp">
-      <Filter>midas\overlay</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\vgui\lines.cpp">
-      <Filter>midas\vgui</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\scripts\condition.cpp">
-      <Filter>midas\scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\scripts\framebulk_handler.cpp">
-      <Filter>midas\scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\scripts\parsed_script.cpp">
-      <Filter>midas\scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\scripts\srctas_reader.cpp">
-      <Filter>midas\scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\scripts\tester.cpp">
-      <Filter>midas\scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\scripts\test_item.cpp">
-      <Filter>midas\scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\scripts\tracker.cpp">
-      <Filter>midas\scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\scripts\variable_container.cpp">
-      <Filter>midas\scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\strafe\strafestuff.cpp">
-      <Filter>midas\strafe</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\aim\aimstuff.cpp">
-      <Filter>midas\aim</Filter>
-    </ClCompile>
     <ClCompile Include="midas\utils\signals.cpp">
       <Filter>midas\utils</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\test.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\graphics.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\ipc-midas.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\aim.cpp">
-      <Filter>midas\features</Filter>
     </ClCompile>
     <ClCompile Include="midas\vgui\vgui_utils.cpp">
       <Filter>midas\vgui</Filter>
@@ -227,15 +134,6 @@
       <Filter>midas\features</Filter>
     </ClCompile>
     <ClCompile Include="midas\features\physvis.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\sg-collide-vis.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\vag_searcher.cpp">
-      <Filter>midas\features</Filter>
-    </ClCompile>
-    <ClCompile Include="midas\features\vag_trace.cpp">
       <Filter>midas\features</Filter>
     </ClCompile>
   </ItemGroup>
@@ -369,25 +267,7 @@
     <ClInclude Include="midas\features\shadow.hpp">
       <Filter>midas\features</Filter>
     </ClInclude>
-    <ClInclude Include="midas\features\playerio.hpp">
-      <Filter>midas\features</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\features\generic.hpp">
-      <Filter>midas\features</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\features\afterframes.hpp">
-      <Filter>midas\features</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\features\autojump.hpp">
-      <Filter>midas\features</Filter>
-    </ClInclude>
     <ClInclude Include="midas\features\tickrate.hpp">
-      <Filter>midas\features</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\features\overlay.hpp">
-      <Filter>midas\features</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\features\demo.hpp">
       <Filter>midas\features</Filter>
     </ClInclude>
     <ClInclude Include="midas\features\tracing.hpp">
@@ -432,65 +312,11 @@
     <ClInclude Include="midas\midas-serverplugin.hpp">
       <Filter>midas</Filter>
     </ClInclude>
-    <ClInclude Include="midas\overlay\overlay-renderer.hpp">
-      <Filter>midas\overlay</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\overlay\overlays.hpp">
-      <Filter>midas\overlay</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\overlay\portal_camera.hpp">
-      <Filter>midas\overlay</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\vgui\lines.hpp">
-      <Filter>midas\vgui</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\scripts\condition.hpp">
-      <Filter>midas\scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\scripts\framebulk_handler.hpp">
-      <Filter>midas\scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\scripts\parsed_script.hpp">
-      <Filter>midas\scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\scripts\range_variable.hpp">
-      <Filter>midas\scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\scripts\srctas_reader.hpp">
-      <Filter>midas\scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\scripts\tester.hpp">
-      <Filter>midas\scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\scripts\test_item.hpp">
-      <Filter>midas\scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\scripts\tracker.hpp">
-      <Filter>midas\scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\scripts\variable_container.hpp">
-      <Filter>midas\scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\strafe\strafe_utils.hpp">
-      <Filter>midas\strafe</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\strafe\strafestuff.hpp">
-      <Filter>midas\strafe</Filter>
-    </ClInclude>
     <ClInclude Include="midas\utils\signals.hpp">
       <Filter>midas\utils</Filter>
     </ClInclude>
-    <ClInclude Include="midas\features\aim.hpp">
-      <Filter>midas\features</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\aim\aimstuff.hpp">
-      <Filter>midas\aim</Filter>
-    </ClInclude>
     <ClInclude Include="midas\vgui\vgui_utils.hpp">
       <Filter>midas\vgui</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\features\tas.hpp">
-      <Filter>midas\features</Filter>
     </ClInclude>
     <ClInclude Include="midas\features\hud.hpp">
       <Filter>midas\features</Filter>
@@ -508,9 +334,6 @@
       <Filter>midas\features</Filter>
     </ClInclude>
     <ClInclude Include="midas\features\physvis.hpp">
-      <Filter>midas\features</Filter>
-    </ClInclude>
-    <ClInclude Include="midas\features\vag_searcher.hpp">
       <Filter>midas\features</Filter>
     </ClInclude>
   </ItemGroup>

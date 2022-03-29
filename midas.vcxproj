@@ -66,7 +66,7 @@
     </PreBuildEvent>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>midas\utils;.;SDK\sdk2013\common;SDK\sdk2013\public;SDK\sdk2013\public\tier0;SDK\sdk2013\public\tier1;SDK\sdk2013\game\server;SDK\sdk2013\game\client;SDK\sdk2013\game\shared;SPTLib\Windows\minhook\include;SPTLib\Windows\Minhook\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>midas\utils;.;SDK\sdk2013\common;SDK\sdk2013\public;SDK\sdk2013\public\tier0;SDK\sdk2013\public\tier1;SDK\sdk2013\game\server;SDK\sdk2013\game\client;SDK\sdk2013\game\shared;SPTLib\Windows\minhook\include;SPTLib\Windows\Minhook\include;$(QTDIR)\include;$(QTDIR)\include\Qt;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SSDK2013;WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;midasONLY;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -96,11 +96,11 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;odbc32.lib;odbccp32.lib;vgui_controls.lib;tier3.lib;%(AdditionalDependencies);ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;odbc32.lib;odbccp32.lib;vgui_controls.lib;tier3.lib;%(AdditionalDependencies);ws2_32.lib;QtGui4.lib;QtCore4.lib;qtmain.lib</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>SDK\sdk2013\lib\common;SDK\sdk2013\lib\public</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>SDK\sdk2013\lib\common;SDK\sdk2013\lib\public;$(QTDIR)\lib</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc;libcd;libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -136,7 +136,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>midas\utils;.;SDK\sdk2013\common;SDK\sdk2013\public;SDK\sdk2013\public\tier0;SDK\sdk2013\public\tier1;SDK\sdk2013\game\server;SDK\sdk2013\game\client;SDK\sdk2013\game\shared;SPTLib\Windows\minhook\include;SPTLib\Windows\Minhook\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>midas\utils;.;SDK\sdk2013\common;SDK\sdk2013\public;SDK\sdk2013\public\tier0;SDK\sdk2013\public\tier1;SDK\sdk2013\game\server;SDK\sdk2013\game\client;SDK\sdk2013\game\shared;SPTLib\Windows\minhook\include;SPTLib\Windows\Minhook\include;$(QTDIR)\include;$(QTDIR)\include\Qt;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SSDK2013;WIN32;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;midasONLY;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -168,11 +168,11 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;odbc32.lib;odbccp32.lib;vgui_controls.lib;tier3.lib;%(AdditionalDependencies);ws2_32.lib</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;odbc32.lib;odbccp32.lib;vgui_controls.lib;tier3.lib;%(AdditionalDependencies);ws2_32.lib;QtGui4.lib;QtCore4.lib;qtmain.lib</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>SDK\sdk2013\lib\common;SDK\sdk2013\lib\public</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>SDK\sdk2013\lib\common;SDK\sdk2013\lib\public;$(QTDIR)\lib</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc;libcd;libcmtd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -267,7 +267,7 @@
     </ClCompile>
     <ClCompile Include="midas\cvars.cpp" />
     <ClCompile Include="midas\feature.cpp" />
-	<ClCompile Include="midas\features\sfm_test.cpp" />
+    <ClCompile Include="midas\features\sfm_test.cpp" />
     <ClCompile Include="midas\features\cvar.cpp" />
     <ClCompile Include="midas\features\dmomm.cpp" />
     <ClCompile Include="midas\features\ent_props.cpp" />
