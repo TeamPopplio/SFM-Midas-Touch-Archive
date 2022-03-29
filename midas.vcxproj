@@ -66,8 +66,8 @@
     </PreBuildEvent>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>midas\utils;.;SDK\sdk2013\common;SDK\sdk2013\public;SDK\sdk2013\public\tier0;SDK\sdk2013\public\tier1;SDK\sdk2013\game\server;SDK\sdk2013\game\client;SDK\sdk2013\game\shared;SPTLib\Windows\minhook\include;SPTLib\Windows\Minhook\include;$(QTDIR)\include;$(QTDIR)\include\Qt;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>SSDK2013;WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;midasONLY;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>midas\utils;.;SDK\swarm\common;SDK\swarm\public;SDK\swarm\public\tier0;SDK\swarm\public\tier1;SDK\swarm\game\server;SDK\swarm\game\client;SDK\swarm\game\shared;SPTLib\Windows\minhook\include;SPTLib\Windows\Minhook\include;$(QTDIR)\include;$(QTDIR)\include\Qt;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>Sswarm;WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;midasONLY;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -100,7 +100,7 @@
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>SDK\sdk2013\lib\common;SDK\sdk2013\lib\public;$(QTDIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>SDK\swarm\lib\common;SDK\swarm\lib\public;$(QTDIR)\lib</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc;libcd;libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -136,8 +136,8 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>midas\utils;.;SDK\sdk2013\common;SDK\sdk2013\public;SDK\sdk2013\public\tier0;SDK\sdk2013\public\tier1;SDK\sdk2013\game\server;SDK\sdk2013\game\client;SDK\sdk2013\game\shared;SPTLib\Windows\minhook\include;SPTLib\Windows\Minhook\include;$(QTDIR)\include;$(QTDIR)\include\Qt;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>SSDK2013;WIN32;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;midasONLY;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>midas\utils;.;SDK\swarm\common;SDK\swarm\public;SDK\swarm\public\tier0;SDK\swarm\public\tier1;SDK\swarm\game\server;SDK\swarm\game\client;SDK\swarm\game\shared;SPTLib\Windows\minhook\include;SPTLib\Windows\Minhook\include;$(QTDIR)\include;$(QTDIR)\include\Qt;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>Sswarm;WIN32;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;midasONLY;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Sync</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -172,7 +172,7 @@
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>SDK\sdk2013\lib\common;SDK\sdk2013\lib\public;$(QTDIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>SDK\swarm\lib\common;SDK\swarm\lib\public;$(QTDIR)\lib</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc;libcd;libcmtd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>

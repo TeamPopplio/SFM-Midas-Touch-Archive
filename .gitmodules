@@ -2,8 +2,8 @@
 	path = SPTLib
 	url = https://github.com/YaLTeR/SPTLib.git
 	shallow = true
-[submodule "SDK/sdk2013"]
-	path = SDK/sdk2013
+[submodule "SDK/swarm"]
+	path = SDK/swarm
 	url = https://github.com/alliedmodders/hl2sdk.git
-	branch = sdk2013
+	branch = swarm
 	shallow = true

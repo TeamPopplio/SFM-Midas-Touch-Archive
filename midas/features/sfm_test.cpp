@@ -3,7 +3,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QMetaObject>
-#include <SDK/sdk2013/public/tier0/dbg.h>
+#include <SDK/swarm/public/tier0/dbg.h>
 
 typedef void* (__fastcall* _MainWindowInteracted)(void* thisptr, int edx);
 
