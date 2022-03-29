@@ -5,7 +5,6 @@
 #include <functional>
 #include <unordered_map>
 #include "SPTLib\patterns.hpp"
-#include "convar.hpp"
 #include "patterns.hpp"
 
 #define ADD_RAW_HOOK(moduleName, name) \
@@ -149,8 +148,6 @@ public:
 	Feature();
 
 protected:
-	void InitConcommandBase(ConCommandBase& convar);
-	bool AddHudCallback(const char* sortKey, std::function<void()> func, ConVar& cvar);
 
 	bool moduleLoaded;
 	bool startedLoading;

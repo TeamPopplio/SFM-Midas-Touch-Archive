@@ -3,6 +3,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QMetaObject>
+#include <SDK/sdk2013/public/tier0/dbg.h>
 
 typedef void* (__fastcall* _MainWindowInteracted)(void* thisptr, int edx);
 
@@ -10,20 +11,20 @@ typedef void* (__fastcall* _MainWindowInteracted)(void* thisptr, int edx);
 class SFMTest : public FeatureWrapper<SFMTest>
 {
 public:
-	static void* __fastcall HOOKED_MainWindowChanged(void* thisptr, int edx);
+	static void* __fastcall HOOKED_SFMLoaded(void* thisptr, int edx);
 
 	// Error flags:
 	// 1 - Animation set editor not found.
 	int AcknowledgedErrorFlags;
 
-	int AnimationSetEditorMaxAttempts = 1000;
+	int AnimationSetEditorMaxAttempts = 100;
 	int AnimationSetEditorAttempts = AnimationSetEditorMaxAttempts;
 
 	QWidget* MainWindow;
 	QWidget* AnimationSetEditor;
 
 protected:
-	_MainWindowInteracted ORIG_MainWindowChanged = nullptr;
+	_MainWindowInteracted ORIG_SFMLoaded = nullptr;
 
 	virtual bool ShouldLoadFeature() override
 	{
@@ -32,7 +33,7 @@ protected:
 
 	virtual void InitHooks() override
 	{
-		HOOK_FUNCTION(ifm, MainWindowChanged);
+		HOOK_FUNCTION(ifm, SFMLoaded);
 	}
 
 	virtual void LoadFeature() override
@@ -48,7 +49,7 @@ protected:
 
 static SFMTest sfm_test;
 
-void* __fastcall SFMTest::HOOKED_MainWindowChanged(void* thisptr, int edx)
+void* __fastcall SFMTest::HOOKED_SFMLoaded(void* thisptr, int edx)
 {
 	if (sfm_test.MainWindow == nullptr)
 	{
@@ -75,7 +76,7 @@ void* __fastcall SFMTest::HOOKED_MainWindowChanged(void* thisptr, int edx)
 			QWidget* widget = sfm_test.MainWindow->findChild<QWidget*>(QString::fromAscii("QAnimationSetEditor"));
 			if (widget != nullptr)
 			{
-				Msg("Midas Touch: Found animation set editor in %d attempts.\n", sfm_test.AnimationSetEditorAttempts);
+				Msg("Midas Touch: Found animation set editor with %d/%d attempts remaining.\n", sfm_test.AnimationSetEditorAttempts, sfm_test.AnimationSetEditorMaxAttempts);
 				sfm_test.AnimationSetEditor = widget;
 			}
 			else if (sfm_test.AnimationSetEditorAttempts > 0)
@@ -92,7 +93,7 @@ void* __fastcall SFMTest::HOOKED_MainWindowChanged(void* thisptr, int edx)
 			}
 		}
 	}
-	return sfm_test.ORIG_MainWindowChanged(thisptr, edx);
+	return sfm_test.ORIG_SFMLoaded(thisptr, edx);
 }
 
 QWidget* GetMainWindow()

@@ -1,15 +1,10 @@
 #include "stdafx.h"
 #include <future>
-#include "convar.hpp"
 #include "feature.hpp"
-#include "interfaces.hpp"
-#include "cvars.hpp"
-#include "features\hud.hpp"
 #include "SPTLib\sptlib.hpp"
 #include "dbg.h"
 #include "SPTLib\Windows\detoursutils.hpp"
 #include "SPTLib\Hooks.hpp"
-#include "cvars.hpp"
 
 static std::unordered_map<std::string, ModuleHookData> moduleHookData;
 static std::unordered_map<uintptr_t, int> patternIndices;
@@ -171,28 +166,6 @@ int Feature::GetPatternIndex(void** origPtr)
 	{
 		return -1;
 	}
-}
-
-void Feature::InitConcommandBase(ConCommandBase& convar)
-{
-	Cvar_InitConCommandBase(convar, this);
-}
-
-bool Feature::AddHudCallback(const char* sortKey, std::function<void()> func, ConVar& convar)
-{
-#if defined(SSDK2007)
-	bool result = midas_hud.AddHudCallback(HudCallback(
-	    sortKey, func, [&convar]() { return convar.GetBool(); }, false));
-
-	if (result)
-	{
-		InitConcommandBase(convar);
-	}
-
-	return result;
-#else
-	return false;
-#endif
 }
 
 void Feature::AddRawHook(std::string moduleName, void** origPtr, void* functionHook)

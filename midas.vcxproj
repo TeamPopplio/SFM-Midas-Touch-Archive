@@ -265,26 +265,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="midas\cvars.cpp" />
     <ClCompile Include="midas\feature.cpp" />
     <ClCompile Include="midas\features\sfm_test.cpp" />
-    <ClCompile Include="midas\features\cvar.cpp" />
-    <ClCompile Include="midas\features\dmomm.cpp" />
-    <ClCompile Include="midas\features\ent_props.cpp" />
-    <ClCompile Include="midas\features\fov.cpp" />
-    <ClCompile Include="midas\features\hops_hud.cpp" />
-    <ClCompile Include="midas\features\hud.cpp" />
-    <ClCompile Include="midas\features\ihud.cpp" />
-    <ClCompile Include="midas\features\isg.cpp" />
-    <ClCompile Include="midas\features\nosleep.cpp" />
-    <ClCompile Include="midas\features\physvis.cpp" />
-    <ClCompile Include="midas\features\restart.cpp" />
-    <ClCompile Include="midas\features\rng.cpp" />
-    <ClCompile Include="midas\features\shadow.cpp" />
-    <ClCompile Include="midas\features\tickrate.cpp" />
-    <ClCompile Include="midas\features\timer.cpp" />
-    <ClCompile Include="midas\features\tracing.cpp" />
-    <ClCompile Include="midas\features\visual_fixes.cpp" />
     <ClCompile Include="sptlib\sptlib.cpp">
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sptlib-stdafx.hpp</PrecompiledHeaderFile>
@@ -302,23 +284,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="midas\midas-serverplugin.cpp" />
-    <ClCompile Include="midas\sptlib-wrapper.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="midas\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.hpp</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.hpp</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="midas\utils\datamap_wrapper.cpp" />
-    <ClCompile Include="midas\utils\ent_utils.cpp" />
     <ClCompile Include="midas\utils\file.cpp" />
-    <ClCompile Include="midas\utils\game_detection.cpp" />
     <ClCompile Include="midas\utils\math.cpp" />
-    <ClCompile Include="midas\utils\property_getter.cpp" />
-    <ClCompile Include="midas\utils\signals.cpp" />
     <ClCompile Include="midas\utils\string_utils.cpp" />
     <ClCompile Include="midas\vgui\vgui_utils.cpp" />
     <ClCompile Include="thirdparty\md5.cpp" />
@@ -363,33 +336,14 @@
     <ClInclude Include="SPTLIB\patterns.hpp" />
     <ClInclude Include="SPTLIB\patterns_macros.hpp" />
     <ClInclude Include="SPTLIB\Windows\DetoursUtils.hpp" />
-    <ClInclude Include="midas\cvars.hpp" />
     <ClInclude Include="midas\feature.hpp" />
-    <ClInclude Include="midas\features\ent_props.hpp" />
-    <ClInclude Include="midas\features\hud.hpp" />
-    <ClInclude Include="midas\features\ihud.hpp" />
-    <ClInclude Include="midas\features\physvis.hpp" />
-    <ClInclude Include="midas\features\rng.hpp" />
-    <ClInclude Include="midas\features\shadow.hpp" />
-    <ClInclude Include="midas\features\tickrate.hpp" />
-    <ClInclude Include="midas\features\tracing.hpp" />
-    <ClInclude Include="midas\ipc\ipc.hpp" />
     <ClInclude Include="midas\patterns.hpp" />
     <ClInclude Include="midas\midas-serverplugin.hpp" />
     <ClInclude Include="sptlib\sptlib.hpp" />
     <ClInclude Include="sptlib\sptlib-stdafx.hpp" />
-    <ClInclude Include="midas\sptlib-wrapper.hpp" />
     <ClInclude Include="midas\stdafx.hpp" />
-    <ClInclude Include="midas\utils\convar.hpp" />
-    <ClInclude Include="midas\utils\custom_interfaces.hpp" />
-    <ClInclude Include="midas\utils\datamap_wrapper.hpp" />
-    <ClInclude Include="midas\utils\ent_utils.hpp" />
     <ClInclude Include="midas\utils\file.hpp" />
-    <ClInclude Include="midas\utils\game_detection.hpp" />
-    <ClInclude Include="midas\utils\interfaces.hpp" />
     <ClInclude Include="midas\utils\math.hpp" />
-    <ClInclude Include="midas\utils\property_getter.hpp" />
-    <ClInclude Include="midas\utils\signals.hpp" />
     <ClInclude Include="midas\utils\string_utils.hpp" />
     <ClInclude Include="midas\vgui\vgui_utils.hpp" />
     <ClInclude Include="thirdparty\Delegate.h" />
