@@ -1,29 +1,31 @@
 # Source Filmmaker: Midas Touch
 
 ### Usage
-1. Download the DLL from the releases page:
+1. Download the `midas.zip` file from the releases page:
     Click [here](https://github.com/TeamPopplio/SFM-Midas-Touch/releases) to visit the releases page.
 
-2. Place the DLL into the correct folder:
-    From the topmost `Source Filmmaker` folder, navigate to `game` and then `usermod`. Place the DLL into `usermod`.
+2. Extract the zip content into the correct folder:
+    From the topmost `Source Filmmaker` folder, navigate to `game` and then `usermod`. Extract `addons` into `usermod`.
 
 3. Launch Source Filmmaker.
-4. Press F11 and go to `Options > Keyboard > Advanced`, check `Enable developer console`, then press OK.
-5. Press the tilde key (<kbd>~</kbd>) and enter `plugin_load midas` into the developer console.
-
-   Add `plugin_load midas` to `cfg/autoexec.cfg` to load Midas Touch automatically.
-
-   *Loading Midas Touch more than once will crash the game!*
+4. Check the console for errors, if any.
+5. If there are no errors, you're good to go!
 
 ### Building
-You will need Visual Studio 2019 and [git](https://git-scm.com).
+You will need Visual Studio 2019, [git](https://git-scm.com), and [Qt 4.8.3 for Visual Studio 2010](https://download.qt.io/archive/qt/4.8/4.8.3/) to build the project.
 
 1. Open Visual Studio 2019. Click on Tools → Get Tools and Features... from the top bar of the window. 
 This should open the Visual Studio Installer in another window. From the Workload tab, install "Desktop development with C++". From the Individual Components tab, install:
 	- MSVC v141 - VS 2017 C++ x64/x86 build tools
 	- C++ Windows XP Support for VS 2017 (v141) tools
 
-1. Run the following in cmd:
+    While inside of Visual Studio, also install the [Qt Visual Studio Tools](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools-19123) extension.
+
+1. From the top bar of the window, click on Extensions → Qt VS Tools → Qt Versions.
+
+1. Add `C:\Qt\4.8.3` as a version path with the name `Qt_4.8.3`.
+
+1. Run the following in a command prompt:
     ```
     git clone --recurse-submodules https://github.com/TeamPopplio/SFM-Midas-Touch.git
     
@@ -36,9 +38,13 @@ This should open the Visual Studio Installer in another window. From the Workloa
 
    Once Visual Studio is open, right click `libMinHook`, click `Properties`, change `Platform Toolset` to the one corresponding to your Visual Studio version, and press OK.
 
+1. Ensure that the build target is set to `Release`.
+
 1. Click `Build > Build Solution`.
 
-   `midas.dll` will be in `SFM-Midas-Touch\<Build Configuration>`
+   `midas.dll` will be in `SFM-Midas-Touch\Release`
+
+   This is a binary that can be loaded within SFM using the `plugin_load` command.
 
 ### References
-Midas Touch is a fork of [SourcePauseTool](https://github.com/YaLTeR/SourcePauseTool).
+Midas Touch is based on [SourcePauseTool](https://github.com/YaLTeR/SourcePauseTool).
